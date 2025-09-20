@@ -1,0 +1,20 @@
+:root {
+  --background-color: #fffaf6;
+  --primary-100: #6e0d1a;
+  --primary-60: #ead7d2;
+  --secondary-100: #f4f0e6;
+  --secondary-60: #c99aa0;
+  --gray-90: #212529;
+  --gray-80: #495057;
+  --gray-60: #868e96;
+  --gray-30: #ced4da;
+  --gray-20: #e9ecef;
+  --gray-10: #f1f3f5;
+  --white: #F8F9FA;
+  --error: #D82C27;
+  --error-2: #FDE2D3;
+}
+
+[data-theme='dark'] {
+  --background-color: #1a1a1a;
+}

@@ -1,0 +1,27 @@
+@import '../theme/theme.css';
+
+// breakpoints
+$mobile-width: 320px;
+$tablet-width: 640px;
+$desktop-width: 1200px;
+$large-desktop-width: 1440px;
+
+// font family & sizes
+$font-family-general: Montserrat, Roboto, sans-serif;
+$font-size-base: 16px;
+
+// colors
+$background-color: var(--background-color);
+$primary-100: var(--primary-100);
+$primary-60: var(--primary-60);
+$secondary-100: var(--secondary-100);
+$secondary-60: var(--secondary-60);
+$gray-90: var(--gray-90);
+$gray-80: var(--gray-80);
+$gray-60: var(--gray-60);
+$gray-30: var(--gray-30);
+$gray-20: var(--gray-20);
+$gray-10: var(--gray-10);
+$white: var(--white);
+$error: var(--error);
+$error-2: var(--error-2);

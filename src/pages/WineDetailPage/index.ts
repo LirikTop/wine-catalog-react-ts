@@ -1,0 +1,1 @@
+export { WineDetailPage } from './WineDetailPage';

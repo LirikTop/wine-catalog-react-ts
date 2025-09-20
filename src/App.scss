@@ -1,3 +1,6 @@
-.starter {
-  font-size: 18px;
+@use './styles/index' as *;
+
+.App {
+  font-size: $font-size-base;
+  font-family: $font-family-general;
 }
