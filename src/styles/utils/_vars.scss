@@ -7,11 +7,11 @@ $desktop-width: 1200px;
 $large-desktop-width: 1440px;
 
 // font family & sizes
-$font-family-general: Montserrat, Roboto, sans-serif;
+$font-family-general: 'Work Sans', Roboto, sans-serif;
 $font-size-base: 16px;
 
 // colors
-$background-color: var(--background-color);
+$background-color: var();
 $primary-100: var(--primary-100);
 $primary-60: var(--primary-60);
 $secondary-100: var(--secondary-100);
@@ -25,3 +25,6 @@ $gray-10: var(--gray-10);
 $white: var(--white);
 $error: var(--error);
 $error-2: var(--error-2);
+
+// text colors
+$main-text-color: var(--main-text-color);

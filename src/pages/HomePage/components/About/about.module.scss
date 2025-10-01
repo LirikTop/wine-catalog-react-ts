@@ -1,0 +1,103 @@
+@use '../../../../styles/index' as *;
+
+.about {
+  &__container {
+    @include page-grid;
+
+    row-gap: 16px;
+
+    @include on-desktop {
+      row-gap: 32px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    grid-column: 1/-1;
+  }
+
+  &__top {
+    @include page-grid;
+    
+    row-gap: 16px;
+  }
+
+  &__title {
+    @extend %h2;
+
+    text-transform: uppercase;
+    text-align: center;
+    grid-column: 1/-1;
+  }
+
+  &__text {
+    @extend %main-text;
+
+    text-align: center;
+    grid-column: 3/11;
+  }
+
+  &__gallery {
+    @include page-grid;
+
+    row-gap: 8px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+
+    @include hover(transform, scale(1.1))
+  }
+
+  &__img-1 {
+    grid-column: 1/2;
+
+    @include on-tablet {
+      grid-column: span 2;
+    }
+
+    @include on-desktop {
+      grid-column: span 4;
+    }
+  }
+
+  &__img-2 {
+    grid-column: span 1;
+
+    @include on-tablet {
+      grid-column: span 2;
+    }
+
+    @include on-desktop {
+      grid-column: span 4;
+    }
+  }
+
+  &__img-3 {
+    grid-column: 1/-1;
+
+    @include on-tablet {
+      grid-column: span 2;
+    }
+
+    @include on-desktop {
+      grid-column: span 4;
+    }
+  }
+
+  &__button {
+    grid-column: 1/-1;
+
+    @include on-tablet {
+      grid-column: 3/5;
+    }
+
+    @include on-desktop {
+      grid-column: 5/9;
+    }
+  }
+}

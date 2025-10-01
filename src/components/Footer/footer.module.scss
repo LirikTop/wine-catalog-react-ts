@@ -1,0 +1,142 @@
+@use '../../styles/index' as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  background: $secondary-100;
+  padding: 16px 0 14px;
+  color: $gray-90;
+  row-gap: 24px;
+
+  @include on-tablet {
+    row-gap: 65px;
+    padding: 33px 0 14px;
+  }
+
+  &__content {
+    @include page-grid;
+
+    row-gap: 32px;
+
+    @include on-tablet {
+      row-gap: 0;
+    }
+  }
+
+  &__title-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    grid-column: 1/-1;
+    height: fit-content;
+
+    // @include on-tablet {
+    //   grid-column: span 3;
+    // }
+
+    // @include on-desktop {
+    //   grid-column: span 3;
+    // }
+  }
+
+  &__title {
+    @extend %h1;
+  }
+
+  &__subtitle {
+    @extend %h3;
+  }
+
+  &__list-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    grid-column: span 1;
+
+    // @include on-tablet {
+    //   grid-column: span 2;
+    // }
+
+    &--1 {
+      @include on-tablet {
+        grid-column: 4/6;
+      }
+
+      @include on-desktop {
+        grid-column: 7/10;
+      }
+    }
+    &--2 {
+      @include on-tablet {
+        grid-column: 6/-1;
+      }
+
+      @include on-desktop {
+        grid-column: 10/12;
+      }
+    }
+  }
+
+  &__list-title {
+    @extend %h4;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__li {
+    &--social {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__link {
+    @extend %secondary-text;
+
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  &__social-link {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $gray-90;
+    border-radius: 50%;
+    width: 40px;
+    aspect-ratio: 1/1;
+  }
+
+  &__icon {
+    font-size: 20px;
+  }
+
+  &__form {
+    grid-column: 1/-1;
+
+    @include on-tablet {
+      grid-column: span 3;
+    }
+    
+    @include on-desktop {
+      grid-column: span 4;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid $gray-90;
+    padding: 16px 0 0 16px;
+  }
+
+  &__copyright {
+    @extend %small-text;
+  }
+}

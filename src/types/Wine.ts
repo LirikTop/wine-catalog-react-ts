@@ -1,10 +1,3 @@
-export type Wine = {
-  id: number;
-  name: string;
-  year: number;
-  grapes: string;
-  country: string;
-  region: string;
-  description: string;
-  picture: string;
-};
+import WineApi from '../api/wineApi.json';
+
+export type Wine = (typeof WineApi)[0];

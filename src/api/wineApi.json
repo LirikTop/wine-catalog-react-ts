@@ -1,0 +1,58 @@
+[
+  {
+    "id": 0,
+    "name": "Weisser Mulatschak",
+    "itemId": "weisser-mulatschak",
+    "type": "White wine",
+    "style": "Dry",
+    "country": "Austria",
+    "producer": "Meinklang",
+    "rating": 4.7,
+    "price": 25,
+    "currency": "$",
+    "nature": true,
+    "image": "https://vinovino.com.ua/content/images/10/1200x1200l80mc0/vino-beloe-suxoe-dulong-sauternes-prestige-05l.-13-22975894186037.png"
+  },
+  {
+    "id": 1,
+    "name": "Rubi",
+    "itemId": "rubi",
+    "type": "Red wine",
+    "style": "Dry",
+    "country": "Czech Republic",
+    "producer": "Krasna hora",
+    "rating": 4.4,
+    "price": 20,
+    "currency": "$",
+    "nature": true,
+    "image": "https://vinovino.com.ua/content/images/10/1200x1200l80mc0/vino-beloe-suxoe-dulong-sauternes-prestige-05l.-13-22975894186037.png"
+  },
+  {
+    "id": 2,
+    "name": "Chardonnay reserve",
+    "itemId": "chardonnay-reserve",
+    "type": "White wine",
+    "style": "Dry",
+    "country": "Ukraine",
+    "producer": "Stakhovsky",
+    "rating": 4.4,
+    "price": 20,
+    "currency": "$",
+    "nature": false,
+    "image": "https://vinovino.com.ua/content/images/10/1200x1200l80mc0/vino-beloe-suxoe-dulong-sauternes-prestige-05l.-13-22975894186037.png"
+  },
+  {
+    "id": 3,
+    "name": "Kurni",
+    "itemId": "kurni",
+    "type": "Red wine",
+    "style": "Dry",
+    "country": "Italy",
+    "producer": "Kurni",
+    "rating": 4.6,
+    "price": 145,
+    "currency": "$",
+    "nature": false,
+    "image": "https://vinovino.com.ua/content/images/10/1200x1200l80mc0/vino-beloe-suxoe-dulong-sauternes-prestige-05l.-13-22975894186037.png"
+  }
+]

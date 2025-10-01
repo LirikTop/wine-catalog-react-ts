@@ -1,0 +1,20 @@
+@use '../../../../styles/index' as *;
+
+.reviews {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    @include on-desktop {
+      row-gap: 40px;
+    }
+  }
+
+  &__title {
+    @extend %h2;
+
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

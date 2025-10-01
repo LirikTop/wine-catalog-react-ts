@@ -1,0 +1,163 @@
+@use '../../styles/index' as *;
+
+@mixin normalise {
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 2px solid var(--icon-border);
+  border-radius: 4px;
+  background: var(--bg-color);
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  cursor: pointer;
+
+  @include hover-all;
+
+  &--none {
+    --icon-color: var(--primary-100);
+    --icon-border: rgba(255, 255, 255, 0);
+    --bg-color: rgba(255, 255, 255, 0);
+  }
+
+  &--primary {
+    --icon-color: var(--primary-100);
+    --icon-border: rgba(255, 255, 255, 0);
+    --bg-color: var(--primary-60);
+
+    &:hover {
+      --icon-color: var(--primary-100);
+      --icon-border: var(--primary-100);
+      --bg-color: var(--primary-60);
+
+      border-color: var(--icon-border);
+
+      @include hover-all;
+    }
+
+    &:active {
+      --icon-color: var(--primary-60);
+      --bg-color: var(--primary-100);
+
+      // border-color: rgba(255, 255, 255, 0);
+    }
+
+    &:disabled {
+      --icon-color: var(--gray-60);
+      --bg-color: var(--gray-20);
+      --icon-border: rgba(128, 255, 0, 0);
+
+      cursor: none;
+      pointer-events: none;
+    }
+  }
+
+  &--active {
+    --icon-color: var(--primary-60);
+    --bg-color: var(--primary-100);
+    --icon-border: rgba(255, 255, 255, 0);
+  }
+
+  &--secondary {
+    --icon-border: var(--primary-100);
+    --icon-color: var(--primary-100);
+    --bg-color: var(--white);
+
+    border: 1px solid var(--icon-border);
+
+    &:hover {
+      --icon-border: var(--secondary-60);
+      --bg-color: var(--white);
+
+      @include hover-all;
+    }
+
+    &:active {
+      --icon-border: var(--primary-100);
+      --icon-color: var(--primary-100);
+      --bg-color: var(--primary-60);
+
+      @include hover-all;
+    }
+
+    &:disabled {
+      --icon-border: var(--gray-30);
+      --icon-color: var(--gray-60);
+      --bg-color: var(--white);
+
+      cursor: none;
+      pointer-events: none;
+    }
+  }
+
+  // &--disabled {
+  //   --icon-color: var(--primary-60);
+  //   --icon-border: var(--primary-100);
+
+  //   cursor: none;
+  //   pointer-events: none;
+  //   background: $gray-20;
+  // }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    background-color: var(--icon-color);
+
+    // &--arrow {
+    //   mask: url(/assets/arrow.svg);
+    //   padding: 8px;
+
+    //   @include normalise;
+    // }
+
+    &--cart {
+      mask: url(/cart.svg);
+      padding: 0;
+
+      @include normalise;
+    }
+
+    &--favorites {
+      mask: url(/favorites.svg);
+      padding: 0;
+
+      @include normalise;
+    }
+
+    &--fav-active {
+      mask: url(/favorites-active.svg);
+      background-color: $error;
+
+      @include normalise;
+    }
+
+    &--star {
+      width: 16px;
+      height: 16px;
+      mask: url(/star.svg);
+
+      @include normalise;
+    }
+
+    // &--minus {
+    //   mask: url(/assets/Minus.svg);
+    //   padding: 8px;
+
+    //   @include normalise;
+    // }
+
+    // &--plus {
+    //   mask: url(/assets/Plus.svg);
+    //   padding: 8px;
+
+    //   @include normalise;
+    // }
+  }
+}

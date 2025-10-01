@@ -1,0 +1,10 @@
+@use '../../styles/index' as *;
+
+.product-carousel {
+  // &__swiper {
+  // }
+
+  &__swiper-item {
+    height: auto !important;
+  }
+}

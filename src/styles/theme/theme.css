@@ -1,4 +1,5 @@
 :root {
+  --main-text-color: #212529;
   --background-color: #fffaf6;
   --primary-100: #6e0d1a;
   --primary-60: #ead7d2;
@@ -13,6 +14,7 @@
   --white: #F8F9FA;
   --error: #D82C27;
   --error-2: #FDE2D3;
+
 }
 
 [data-theme='dark'] {

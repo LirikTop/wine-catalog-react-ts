@@ -1,3 +1,7 @@
 @use '../../styles/index' as *;
 
-
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}

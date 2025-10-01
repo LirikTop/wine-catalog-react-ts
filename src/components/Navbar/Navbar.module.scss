@@ -1,0 +1,81 @@
+@use '../../styles/index' as *;
+
+.nav {
+  --color: var(--main-text-color);
+
+  position: absolute;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+  color: var(--color);
+
+  @include hover-all;
+
+  @include on-tablet {
+    position: relative;
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &--home {
+    --color: var(--white);
+  }
+
+  // &--menu {
+  //   position: relative;
+  //   transform: translateX(0);
+  //   opacity: 1;
+  // }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 16px 32px;
+
+    @include on-desktop {
+      column-gap: 64px;
+    }
+
+    // &--menu {
+    //   flex-direction: column;
+    // }
+  }
+
+  &__item {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  &__link {
+    @extend %h3;
+
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: inherit;
+
+    @include link-bottom-line-action('hover', var(--color));
+
+    &--active {
+      @include link-bottom-line-action('active', var(--color));
+    }
+
+    // &--menu {
+    //   padding-inline: 0;
+
+    //   @include link-padding;
+
+    //   &--active {
+    //     color: $gray-80;
+
+    //     @include link-bottom-line-action('active');
+    //   }
+    // }
+  }
+}

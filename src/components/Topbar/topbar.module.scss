@@ -1,0 +1,50 @@
+@use '../../styles/index' as *;
+
+.top-bar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  justify-content: space-between;
+  color: $gray-90;
+  padding-block: 24px;
+
+  &--home {
+    color: $white;
+  }
+
+  &__nav {
+    display: flex;
+    column-gap: 8px;
+
+    @include on-tablet {
+      column-gap: 24px;
+    }
+  }
+
+  &__logo-link {
+    @extend %h1;
+    
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  &__logo-img {
+    width: 127px;
+    height: 28px;
+    object-fit: contain;
+
+    @include on-desktop {
+      max-width: 80px;
+      max-height: 28px;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    column-gap: 16px;
+  }
+}

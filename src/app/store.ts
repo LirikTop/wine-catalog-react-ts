@@ -5,9 +5,20 @@ import {
   Action,
   combineSlices,
 } from '@reduxjs/toolkit';
+import { favoritesSlice } from '../features/favoritesSlice';
+import { commentsSlice } from '../features/commentsSlice';
+import { userSlice } from '../features/userSlice';
+import { cartSlice } from '../features/cartSlice';
+import { wineSlice } from '../features/wineSlice';
 // eslint-disable-next-line import/no-cycle
 
-const rootReducer = combineSlices();
+const rootReducer = combineSlices(
+  favoritesSlice,
+  commentsSlice,
+  userSlice,
+  cartSlice,
+  wineSlice,
+);
 
 export const store = configureStore({
   reducer: rootReducer,

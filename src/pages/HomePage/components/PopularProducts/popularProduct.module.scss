@@ -1,0 +1,39 @@
+@use '../../../../styles/index' as *;
+
+.popular-products {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__title {
+    @extend %h2;
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__corousel-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 19px;
+
+    @include on-tablet {
+      row-gap: 24px;
+    }
+  }
+
+  &__link-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__link {
+    @extend %small-text;
+
+    color: $primary-100;
+    text-align: end;
+    text-underline-offset: 4px;
+  }
+}

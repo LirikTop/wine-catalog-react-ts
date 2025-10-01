@@ -50,7 +50,7 @@
   }
 }
 
-@mixin link-bottom-line {
+@mixin link-bottom-line($_color: var(--main-text-color)) {
   & {
     position: relative;
   }
@@ -64,15 +64,15 @@
     width: 100%;
     height: 2px;
 
-    background-color: $main-text-color;
+    background-color: $_color;
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s;
   }
 }
 
-@mixin link-bottom-line-action($_action) {
-  @include link-bottom-line;
+@mixin link-bottom-line-action($_action, $_color: var(--main-text-color)) {
+  @include link-bottom-line($_color);
 
   @if $_action == 'hover' {
     &:hover::after {
@@ -92,9 +92,9 @@
   }
 }
 
-@mixin active($_property, $_toValue) {
-  &:active {
-    #{$_property}: $_toValue;
+@mixin hover-all {
+  & {
+    transition: all 0.3s ease-in-out;
   }
 }
 

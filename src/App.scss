@@ -3,4 +3,11 @@
 .App {
   font-size: $font-size-base;
   font-family: $font-family-general;
+  color: $main-text-color;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+  }
 }
