@@ -33,11 +33,10 @@ export const Navbar: React.FC<NavbarProps> = React.memo(
       [navBarStyle[`nav__item--${variant}`]]: variant,
     });
 
-    const getClassNav = cn(
-      cn(navBarStyle.nav, {
-        [navBarStyle[`nav--home`]]: location.pathname === PagesLinkEnum.home,
-      }),
-    );
+    const getClassNav = cn(navBarStyle.nav, {
+      [navBarStyle[`nav--home`]]: location.pathname === PagesLinkEnum.home,
+      [navBarStyle[`nav--${variant}`]]: !!variant,
+    });
 
     return (
       <nav className={getClassNav}>

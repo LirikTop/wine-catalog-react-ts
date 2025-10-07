@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom';
 import { Button } from '../../../../components/Button';
 import style from './about.module.scss';
 import cn from 'classnames';
+import { PagesLinkEnum } from '../../../../types/PagesType';
 
 export const About = () => {
   return (
@@ -39,9 +41,9 @@ export const About = () => {
             />
           </div>
         </div>
-        <div className={cn(style.about__button)}>
+        <Link to={PagesLinkEnum.about} className={cn(style.about__button)}>
           <Button variant={'secondary'}>About us</Button>
-        </div>
+        </Link>
       </div>
     </section>
   );

@@ -296,20 +296,44 @@ export const placeOrder = createAsyncThunk<
   }
 });
 
+// export const addToCart = createAsyncThunk(
+//   'cart/addToCart',
+//   async (product: Wine) => {
+//     const cart = loadCartFromStorage();
+//     const existing = cart.find(i => i.id === product.id);
+
+//     let updated: CartItem[];
+
+//     if (existing) {
+//       updated = cart.map(i =>
+//         i.id === product.id ? { ...i, quantity: i.quantity + 1 } : i,
+//       );
+//     } else {
+//       updated = [...cart, { ...product, quantity: 1 }];
+//     }
+
+//     saveCartToStorage(updated);
+
+//     return updated;
+//   },
+// );
+
 export const addToCart = createAsyncThunk(
   'cart/addToCart',
-  async (product: Wine) => {
+  async (product: Wine & { quantity?: number }) => {
     const cart = loadCartFromStorage();
     const existing = cart.find(i => i.id === product.id);
+
+    const qty = product.quantity ?? 1; // якщо не передано — ставимо 1
 
     let updated: CartItem[];
 
     if (existing) {
       updated = cart.map(i =>
-        i.id === product.id ? { ...i, quantity: i.quantity + 1 } : i,
+        i.id === product.id ? { ...i, quantity: i.quantity + qty } : i,
       );
     } else {
-      updated = [...cart, { ...product, quantity: 1 }];
+      updated = [...cart, { ...product, quantity: qty }];
     }
 
     saveCartToStorage(updated);

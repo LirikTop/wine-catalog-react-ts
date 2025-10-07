@@ -1,6 +1,11 @@
 import React, { useCallback } from 'react';
 import iconStyle from './Icon.module.scss';
-import { NavLink, NavLinkRenderProps, useLocation } from 'react-router-dom';
+import {
+  NavLink,
+  NavLinkRenderProps,
+  useLocation,
+  useNavigate,
+} from 'react-router-dom';
 import cn from 'classnames';
 import { IconEnum } from '../../types/iconsType';
 import { NavVariants } from '../../types/NavVariants';
@@ -23,6 +28,7 @@ export const Icon: React.FC<IconProps> = React.memo(
     onActive = () => {},
   }) => {
     const location = useLocation();
+    const navigate = useNavigate();
     const getActive = () => onActive((current: boolean) => !current);
     const getPath = useCallback(
       (icon: string): string => {
@@ -57,24 +63,15 @@ export const Icon: React.FC<IconProps> = React.memo(
       [iconName, variant],
     );
 
+    const hendleRedirect = (icon: keyof typeof IconEnum) => {
+      navigate(getPath(icon));
+    };
+
     return (
-      // <NavLink
-      //   to={getPath(iconName)}
-      //   className={isActive => getNavLinkClass(isActive)}
-      //   onClick={getActive}
-      //   aria-label={iconName}
-      // >
-      //   {Boolean(count) && (
-      //     <p
-      //       className={cn(iconStyle.icon__counter, {
-      //         [iconStyle['icon__counter--menu']]: variant === NavVariants.menu,
-      //       })}
-      //     >
-      //       {count}
-      //     </p>
-      //   )}
-      // </NavLink>
-      <div className={cn(iconStyle.icon__container)}>
+      <div
+        className={cn(iconStyle.icon__container)}
+        onClick={() => hendleRedirect(iconName)}
+      >
         <NavLink
           to={getPath(iconName)}
           className={isActive => getNavLinkClass(isActive)}

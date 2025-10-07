@@ -12,3 +12,5 @@ export enum IconEnum {
   // plus = 'plus',
   // minus = 'minus',
 }
+
+export type SocialIconsType = 'instagram' | 'facebook' | 'telegram';

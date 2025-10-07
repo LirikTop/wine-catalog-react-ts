@@ -20,7 +20,7 @@
 
   &__top {
     @include page-grid;
-    
+
     row-gap: 16px;
   }
 
@@ -90,6 +90,7 @@
   }
 
   &__button {
+    text-decoration: none;
     grid-column: 1/-1;
 
     @include on-tablet {

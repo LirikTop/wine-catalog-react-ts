@@ -4,10 +4,16 @@
   font-size: $font-size-base;
   font-family: $font-family-general;
   color: $main-text-color;
+  background: $main-bg-color;
 
   &__content {
     display: flex;
     flex-direction: column;
     row-gap: 48px;
+  }
+
+  &__main {
+    min-height: 50vh;
+
   }
 }

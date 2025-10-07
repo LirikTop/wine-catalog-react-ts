@@ -1,3 +1,237 @@
+// @use '../../styles/index' as *;
+
+// .shopPage {
+//   &__container {
+//     display: flex;
+//     flex-direction: column;
+//     row-gap: 32px;
+//   }
+
+//   &__search-bar {
+//   }
+
+//   &__content {
+//     display: flex;
+//     flex-direction: column;
+//     row-gap: 16px;
+//   }
+
+//   &__filter-sort {
+//     position: relative;
+//     z-index: 1;
+//     display: flex;
+//     justify-content: end;
+//     column-gap: 16px;
+//   }
+
+//   &__filter-sort-icon {
+//     @include on-tablet {
+//       opacity: 0;
+//       transition: all 0.3s;
+//       pointer-events: none;
+//     }
+//   }
+
+//   &__sort-selector {
+//     position: fixed;
+//     opacity: 0;
+//     transition: all 0.3s;
+//     transform: translateX(-100%);
+//     pointer-events: none;
+//     width: 184px;
+//     // max-height: 50px;
+
+//     @include on-tablet {
+//       position: relative;
+//       opacity: 1;
+//       transform: translateX(0);
+//       pointer-events: all;
+//     }
+//   }
+// }
+
+// @use '../../styles/index' as *;
+
+// .shopPage {
+//   margin-top: 60px;
+//   &__container {
+//     @include page-grid;
+//     // display: flex;
+//     // flex-direction: column;
+//     row-gap: 32px;
+//     grid-template-rows: auto;
+//   }
+
+//   &__search-bar {
+//     grid-column: 1/-1;
+//     grid-row: 1;
+
+//     @include on-desktop {
+//       grid-column: 1 / span 3;
+//     }
+//   }
+
+//   &__content {
+//     display: flex;
+//     flex-direction: column;
+//     row-gap: 16px;
+//     grid-column: 1/-1;
+//     grid-row: 2;
+
+//     @include on-desktop {
+//       grid-column: 4/-1;
+//       row-gap: 24px;
+//     }
+//   }
+
+//   &__filter-sort {
+//     position: relative;
+//     z-index: 1;
+//     display: flex;
+//     justify-content: end;
+//     column-gap: 16px;
+//   }
+
+//   &__filter-sort-icon {
+//     @include on-tablet {
+//       opacity: 0;
+//       transition: all 0.3s;
+//       pointer-events: none;
+//     }
+//   }
+
+//   &__sort-selector {
+//     position: fixed;
+//     opacity: 0;
+//     transition: all 0.3s;
+//     transform: translateX(-100%);
+//     pointer-events: none;
+//     width: 184px;
+//     // max-height: 50px;
+
+//     @include on-tablet {
+//       position: relative;
+//       opacity: 1;
+//       transform: translateX(0);
+//       pointer-events: all;
+//     }
+//   }
+
+//   &__filter-panel {
+//     opacity: 0;
+//     transition: all 0.3s;
+//     width: 0;
+//     pointer-events: none;
+
+//     @include on-tablet {
+//       position: relative;
+//       opacity: 1;
+//       width: 100%;
+//       pointer-events: all;
+//       grid-column: 1/span 3;
+//       grid-row: 3;
+//     }
+//   }
+// }
+
 @use '../../styles/index' as *;
 
+.shopPage {
+  margin-top: 60px;
+  &__container {
+    @include page-grid;
 
+    row-gap: 32px;
+    grid-template-rows: auto;
+  }
+
+  &__search-bar {
+    grid-column: 1/-1;
+    grid-row: 1;
+
+    @include on-tablet {
+      grid-column: 1 / span 2;
+    }
+
+    @include on-desktop {
+      grid-column: 1 / span 3;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    grid-column: 1/-1;
+    grid-row: 3;
+
+    @include on-tablet {
+      grid-column: 3/-1;
+      row-gap: 24px;
+    }
+
+    @include on-desktop {
+      grid-column: 4/-1;
+    }
+  }
+
+  &__filter-sort {
+    grid-column: 1/-1;
+    grid-row: 2;
+  }
+
+  &__filter-sort-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: end;
+    column-gap: 16px;
+  }
+
+  &__filter-sort-icon {
+    @include on-tablet {
+      opacity: 0;
+      transition: all 0.3s;
+      pointer-events: none;
+    }
+  }
+
+  &__sort-selector {
+    position: fixed;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: translateX(-100%);
+    pointer-events: none;
+    width: 184px;
+
+    @include on-tablet {
+      position: relative;
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: all;
+    }
+  }
+
+  &__filter-panel {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+
+    @include on-tablet {
+      position: relative;
+      opacity: 1;
+      width: 100%;
+      height: auto;
+      pointer-events: all;
+      grid-column: 1 / span 2;
+      grid-row: 3;
+    }
+    
+    @include on-desktop {
+      grid-column: 1 / span 3;
+    }
+  }
+}

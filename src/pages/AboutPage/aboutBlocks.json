@@ -1,0 +1,75 @@
+[
+  {
+    "class": "company",
+    "title": "The company",
+    "blocks": [
+      {
+        "text": [
+          "Wine is more than just a drink. It is history, culture, and emotions that are born in every bottle. It was with this idea in mind that WINSET was created — a place where everyone can discover the world of wine in a convenient and inspiring way."
+        ],
+        "images": {
+          "image": "/images/about_us/company-1.png",
+          "tabletImage": "/images/about_us/company-1-tb.png"
+        }
+      },
+      {
+        "text": [
+          "WINSET is your virtual sommelier, always at your side. It will help you navigate hundreds of names and choose a wine for a gathering with friends, a romantic dinner, or a family feast. Here you will find both affordable and simple options, as well as rare wines with a rich history. Each recommendation is designed to allow you to enjoy the moment without unnecessary worries. After all, choosing wine should be a pleasure, not a chore."
+        ],
+        "images": {
+          "image": "/images/about_us/company-2.png",
+          "tabletImage": "/images/about_us/company-2-tb.png"
+        }
+      },
+      {
+        "text": [
+          "We created this space for those who want to go beyond the ordinary choice and discover something new each time. Whether you are just beginning your journey into the world of wine or you are already a true connoisseur, WINSET will help you find what resonates with your mood and occasion.",
+          "Our mission is to inspire, educate, and guide — without pathos, but with genuine love for wine. Because for us, it’s not only about what you drink, but also about the experience you share with others."
+        ],
+        "images": {
+          "image": "/images/about_us/company-3.png",
+          "tabletImage": "/images/about_us/company-3-tb.png"
+        }
+      }
+    ]
+  },
+
+  {
+    "class": "why-us",
+    "title": "why us",
+    "blocks": [
+      {
+        "text": [
+          "Choosing wine can seem complicated: the multitude of names, varieties, and styles can easily confuse even those who are familiar with wine. This is where we come in to help. WINSET was created to remove all doubts and turn choosing wine into an enjoyable adventure.",
+          "We don't just give you a list of wines — we suggest which one is right for you. Thanks to easy guidelines, convenient filters, and honest descriptions, you can quickly find what suits your mood, taste, and budget. It's like having a personal sommelier who always knows the right answer."
+        ],
+        "images": {
+          "image": "/images/about_us/why_us-1.png",
+          "tabletImage": "/images/about_us/why_us-1-tb.png"
+        }
+      },
+      {
+        "text": [
+          "What makes us special:",
+          "• Personalized approach — we help you choose wine for a specific occasion or mood.",
+          "• Variety — from classic options to wines for special moments.",
+          "• Simplicity and accessibility — even without knowledge of wine, you can easily navigate and find the perfect option.",
+          "• Comfort — we create a space where choosing wine brings pleasure and joy without unnecessary hassle."
+        ],
+        "images": {
+          "image": "/images/about_us/why_us-2.png",
+          "tabletImage": "/images/about_us/why_us-2-tb.png"
+        }
+      },
+      {
+        "text": [
+          "We believe that wine should be accessible to everyone — regardless of experience or budget. That's why WINSET exists to make this world open, friendly, and inspiring for you."
+        ],
+        "images": {
+          "image": "/images/about_us/why_us-3.png",
+          "tabletImage": "/images/about_us/why_us-3-tb.png"
+        }
+      }
+    ]
+  }
+]

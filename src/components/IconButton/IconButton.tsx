@@ -89,12 +89,13 @@ export const IconButton: React.FC<Props> = React.memo(
     const favorites = useAppSelector(selectFavorites);
     const { cartItems } = useAppSelector(selectCart);
     const dispatch = useAppDispatch();
-
     const isFavorite = product
-      ? favorites.some(f => f.id === product.id)
+      ? favorites.some(item => item.id === product.id)
       : false;
 
-    const isCart = product ? cartItems.some(f => f.id === product.id) : false;
+    const isCart = product
+      ? cartItems.some(item => item.id === product.id)
+      : false;
 
     const handleClick = () => {
       if (!product) {

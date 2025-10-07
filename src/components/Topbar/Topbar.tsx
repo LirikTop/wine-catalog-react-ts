@@ -10,6 +10,7 @@ import { NavVariants } from '../../types/NavVariants';
 import { useAppSelector } from '../../app/hooks';
 import { selectCart } from '../../features/cartSlice';
 import { selectFavorites } from '../../features/favoritesSlice';
+import { Menu } from '../Menu';
 // import cn from 'classnames';
 
 export const Topbar = () => {
@@ -47,23 +48,23 @@ export const Topbar = () => {
           variant={NavVariants.home}
           key={IconEnum.person}
         />
+
         <Icon
-          // count={cartProducts.length}
-          iconName={IconEnum.cart}
-          href={PagesLinkEnum.cart}
-          variant={NavVariants.home}
-          key={IconEnum.cart}
-          count={cartItems.length}
-        />
-        <Icon
-          // count={favProducts.length}
           iconName={IconEnum.favorites}
           href={PagesLinkEnum.favorites}
           variant={NavVariants.home}
           key={IconEnum.favorites}
           count={favorites.length}
         />
+        <Icon
+          iconName={IconEnum.cart}
+          href={PagesLinkEnum.cart}
+          variant={NavVariants.home}
+          key={IconEnum.cart}
+          count={cartItems.length}
+        />
       </div>
+      <Menu isActive={isActive} />
     </div>
   );
 };

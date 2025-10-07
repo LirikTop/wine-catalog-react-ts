@@ -1,0 +1,8 @@
+@use '../../../../styles/index' as *;
+
+.icon {
+  font-size: 24px;
+  color: $primary-100;
+  cursor: pointer;
+  width: 24px;
+}

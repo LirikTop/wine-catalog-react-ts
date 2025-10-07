@@ -1,0 +1,85 @@
+@use '../../../../../../styles/index' as *;
+
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.country {
+  @include page-grid;
+
+  @include on-tablet {
+    display: block;
+    max-width: 208px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    grid-column: 1 / span 1;
+  }
+
+  &__input-content {
+    @extend %main-text;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 12px;
+
+    border-bottom: 1px solid $gray-30;
+    padding-bottom: 12px;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  &__input {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid $primary-100;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    &:hover {
+      border-color: $primary-100;
+    }
+
+    &:checked {
+      background-color: $primary-100;
+      border-color: $primary-100;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0.35rem;
+      height: 0.7rem;
+      border-right: 3px solid $white;
+      border-bottom: 3px solid $white;
+      transform: rotate(45deg) scale(0);
+      transform-origin: center;
+      transition: transform 0.15s ease-in-out;
+    }
+
+    &:checked::after {
+      transform: rotate(45deg) scale(1) translate(-1px, -1px);
+    }
+  }
+}

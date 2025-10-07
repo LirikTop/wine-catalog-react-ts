@@ -1,0 +1,31 @@
+@use '../../../../styles/index' as *;
+
+.selector {
+  position: relative;
+
+  &__button {
+    height: 50px;
+  }
+
+  &__sort-list {
+    position: absolute;
+    background-color: $white;
+    z-index: 10;
+    width: 100%;
+    padding: 16px;
+    box-shadow: 2px 3px 7px 0 #6e0d1a80;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+
+    opacity: 0;
+    transition: all 0.3s;
+    transform: translateX(-15%) translateY(-10%);
+    pointer-events: none;
+
+    &--active {
+      opacity: 1;
+      transform: translateX(-15%) translateY(16px);
+      pointer-events: all;
+    }
+  }
+}

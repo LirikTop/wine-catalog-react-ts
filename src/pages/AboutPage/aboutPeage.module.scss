@@ -1,3 +1,119 @@
 @use '../../styles/index' as *;
 
+.about-page {
+  padding-top: 24px;
 
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+
+    @include on-desktop {
+      row-gap: 100px;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+
+  &__block-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    @include on-desktop {
+      row-gap: 56px;
+    }
+  }
+
+  &__title {
+    @extend %h2;
+
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    @include on-tablet {
+      @include page-grid;
+
+      align-items: center;
+      row-gap: 0;
+    }
+  }
+  &__text-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    @include on-tablet {
+      grid-column: span 3;
+    }
+
+    @include on-desktop {
+      grid-column: span 6;
+    }
+
+    &--first {
+      grid-row: 1;
+
+      @include on-tablet {
+        grid-column: 4/-1;
+      }
+
+      @include on-desktop {
+        grid-column: 7/-1;
+      }
+    }
+  }
+
+  &__text {
+    @extend %secondary-text;
+  }
+
+  &__image-wrapper {
+    grid-column: 1/-1;
+
+    @include on-tablet {
+      grid-column: span 3;
+    }
+
+    @include on-desktop {
+      grid-column: span 6;
+    }
+
+    &--first {
+      grid-row: 1;
+
+      @include on-tablet {
+        grid-column: 1/4;
+      }
+
+      @include on-desktop {
+        grid-column: 1/7;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    max-height: 400px;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    @include on-desktop {
+      row-gap: 112px;
+    }
+  }
+}

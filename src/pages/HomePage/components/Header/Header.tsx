@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
 import { Button } from '../../../../components/Button';
 import { Topbar } from '../../../../components/Topbar';
 import style from './header.module.scss';
 import cn from 'classnames';
+import { PagesLinkEnum } from '../../../../types/PagesType';
 
 export const Header = () => {
   return (
@@ -12,9 +14,9 @@ export const Header = () => {
           <h2 className={style.header__title}>
             Explore, taste and enjoy - find your perfect wine!
           </h2>
-          <div className={style.header__button}>
+          <Link to={PagesLinkEnum.shop} className={style.header__button}>
             <Button variant="primary">Choose your wine</Button>
-          </div>
+          </Link>
         </div>
       </div>
     </header>

@@ -1,0 +1,9 @@
+@use '../../../../styles/index' as *;
+
+
+.search {
+  display: block;
+  background: $main-bg-color;
+  color: $secondary-60;
+  border: 2px solid $secondary-60;
+}

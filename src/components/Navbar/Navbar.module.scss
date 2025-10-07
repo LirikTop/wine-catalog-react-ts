@@ -23,11 +23,13 @@
     --color: var(--white);
   }
 
-  // &--menu {
-  //   position: relative;
-  //   transform: translateX(0);
-  //   opacity: 1;
-  // }
+  &--menu {
+    --color: var(--gray-90);
+
+    position: relative;
+    transform: translateX(0);
+    opacity: 1;
+  }
 
   &__list {
     display: flex;
@@ -39,9 +41,9 @@
       column-gap: 64px;
     }
 
-    // &--menu {
-    //   flex-direction: column;
-    // }
+    &--menu {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -66,16 +68,16 @@
       @include link-bottom-line-action('active', var(--color));
     }
 
-    // &--menu {
-    //   padding-inline: 0;
+    &--menu {
+      padding-inline: 0;
 
-    //   @include link-padding;
+      @include link-padding;
 
-    //   &--active {
-    //     color: $gray-80;
+      &--active {
+        color: $gray-80;
 
-    //     @include link-bottom-line-action('active');
-    //   }
-    // }
+        @include link-bottom-line-action('active');
+      }
+    }
   }
 }

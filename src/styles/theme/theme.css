@@ -1,5 +1,6 @@
 :root {
   --main-text-color: #212529;
+  --main-bg-color: #f8f9fa;
   --background-color: #fffaf6;
   --primary-100: #6e0d1a;
   --primary-60: #ead7d2;
@@ -11,10 +12,9 @@
   --gray-30: #ced4da;
   --gray-20: #e9ecef;
   --gray-10: #f1f3f5;
-  --white: #F8F9FA;
-  --error: #D82C27;
-  --error-2: #FDE2D3;
-
+  --white: #f8f9fa;
+  --error: #d82c27;
+  --error-2: #fde2d3;
 }
 
 [data-theme='dark'] {

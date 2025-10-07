@@ -2,10 +2,8 @@
 import { Input } from '../Input';
 import style from './footer.module.scss';
 import cn from 'classnames';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { SocialIcon } from '../SocialIcon';
 
 export const Footer = () => {
   return (
@@ -69,36 +67,9 @@ export const Footer = () => {
               </Link>
             </li>
             <li className={cn(style.footer__li, style['footer__li--social'])}>
-              <Link
-                to="#"
-                className={cn(style.footer__link, style['footer__social-link'])}
-              >
-                <FontAwesomeIcon
-                  icon={faInstagram}
-                  className={cn(style.footer__icon, style.footer__faInstagram)}
-                />
-              </Link>
-              <Link
-                to="#"
-                className={cn(style.footer__link, style['footer__social-link'])}
-              >
-                <FontAwesomeIcon
-                  icon={faFacebookF}
-                  className={cn(style.footer__icon, style.footer__faFacebookF)}
-                />
-              </Link>
-              <Link
-                to="#"
-                className={cn(style.footer__link, style['footer__social-link'])}
-              >
-                <FontAwesomeIcon
-                  icon={faPaperPlane}
-                  className={cn(
-                    style.footer__icon,
-                    style['footer__fa-paper-plane'],
-                  )}
-                />
-              </Link>
+              <SocialIcon variant={'instagram'} />
+              <SocialIcon variant={'facebook'} />
+              <SocialIcon variant={'telegram'} />
             </li>
           </ul>
         </div>
@@ -108,8 +79,6 @@ export const Footer = () => {
       </div>
       <div className={style.footer__bottom}>
         <small className={style.footer__copyright}>© 2025, WINSET.</small>
-        {/* <div className="container">
-        </div> */}
       </div>
     </div>
   );

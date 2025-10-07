@@ -110,7 +110,7 @@
   --columns: 2;
   --width-column: 1fr;
 
-  display: grid !important;
+  display: grid;
   grid-template-columns: repeat(var(--columns), var(--width-column));
   column-gap: 8px;
 

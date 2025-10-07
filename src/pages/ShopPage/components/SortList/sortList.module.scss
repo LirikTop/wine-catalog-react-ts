@@ -1,0 +1,40 @@
+@use '../../../../styles/index' as *;
+
+.sort-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  @include on-tablet {
+    row-gap: 8px;
+  }
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 8px 0;
+
+  @include hover(background, $secondary-100);
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+.radio {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border: 2px solid $primary-100;
+  border-radius: 50%;
+  transition: 0.2s;
+  position: relative;
+}
+
+input[type='radio']:checked + .radio {
+  border-color: $primary-100;
+  background: radial-gradient($primary-100 50%, transparent 52%);
+}

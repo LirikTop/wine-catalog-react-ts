@@ -7,6 +7,7 @@ import { fetchUsers } from './features/userSlice';
 import { fetchWines } from './features/wineSlice';
 import { useEffect } from 'react';
 import { Footer } from './components/Footer/Footer';
+import { PageProvider } from './context/PageContext';
 
 export const App = () => {
   const dispatch = useAppDispatch();
@@ -20,16 +21,18 @@ export const App = () => {
   const isHomePage = location.pathname === '/' || location.pathname === '/home';
 
   return (
-    <div className="App">
-      {!isHomePage && <Topbar />}
-      <div className="App__content">
-        <main className="App__main">
-          <Outlet />
-        </main>
-        <footer>
-          <Footer />
-        </footer>
+    <PageProvider>
+      <div className="App">
+        <div className="container">{!isHomePage && <Topbar />}</div>
+        <div className="App__content">
+          <main className="App__main">
+            <Outlet />
+          </main>
+          <footer>
+            <Footer />
+          </footer>
+        </div>
       </div>
-    </div>
+    </PageProvider>
   );
 };
