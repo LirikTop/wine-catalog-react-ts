@@ -1,0 +1,202 @@
+@use '../../../../styles/index' as *;
+
+.card {
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+
+    @include on-tablet {
+      @include page-grid;
+
+      align-items: start;
+      width: 100%;
+      grid-auto-rows: auto;
+    }
+  }
+
+  &__imageColumn {
+    display: flex;
+    flex-direction: column;
+    grid-area: image;
+
+    @include on-tablet {
+      grid-column: 1 / span 3;
+      row-gap: 32px;
+    }
+
+    @include on-desktop {
+      grid-column: 1 / span 6;
+    }
+  }
+
+  &__imageContent {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 8px;
+    background: $secondary-100;
+    border: 1px solid $gray-30;
+
+    @include on-tablet {
+      max-height: 450px;
+    }
+
+    @include on-desktop {
+      max-height: 500px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+
+    @include on-tablet {
+      aspect-ratio: initial;
+    }
+  }
+
+  &__iconWrapper {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 3;
+  }
+
+  &__content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    @include on-tablet {
+      grid-column: 4 / -1;
+    }
+
+    @include on-desktop {
+      grid-column: 7 / -1;
+      row-gap: 40px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    @include on-desktop {
+      row-gap: 48px;
+    }
+  }
+
+  &__titleContent {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__title {
+    @extend %h2;
+  }
+
+  &__title-icon {
+    font-size: 24px;
+    color: $gray-90;
+  }
+
+  &__ratingPriceContent {
+    display: flex;
+    flex-direction: column;
+    row-gap: 28px;
+
+    @include on-desktop {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+
+  &__ratingContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 16px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  &__reviews {
+    color: $gray-60;
+  }
+
+  &__priceContent {
+    @extend %h2;
+
+    display: flex;
+    column-gap: 21px;
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 390px;
+  }
+
+  &__detailInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include on-desktop {
+      row-gap: 40px;
+    }
+  }
+
+  &__desctiption-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  &__tasteRating {
+    &--mob {
+      grid-area: taste;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      @include on-tablet {
+        display: none;
+      }
+    }
+
+    &--tab {
+      display: none;
+
+      @include on-tablet {
+        grid-area: taste;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        position: sticky;
+        top: 120px;
+        align-self: start;
+        grid-column: 1 / span 3;
+        grid-row: 3;
+      }
+
+      @include on-desktop {
+        position: sticky;
+        top: 120px;
+        align-self: start;
+        grid-column: 1 / span 6;
+      }
+    }
+  }
+}

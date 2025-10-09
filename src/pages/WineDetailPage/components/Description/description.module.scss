@@ -1,0 +1,15 @@
+@use '../../../../styles/index' as *;
+
+.description {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
+  &__title {
+    @extend %h3;
+  }
+
+  &__text {
+    @extend %secondary-text;
+  }
+}

@@ -1,0 +1,20 @@
+@use '../../styles/index' as *;
+
+.back-button {
+  @extend %small-text;
+
+  display: flex;
+  column-gap: 8px;
+  width: 24px;
+  height: 13px;
+  align-items: center;
+  color: $gray-90;
+  cursor: pointer;
+
+  @include hover(color, $error);
+
+  &__icon {
+    display: flex;
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,24 @@
+@use '../../styles/index' as *;
+
+.items-quantity {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95px;
+  height: 37px;
+  padding-inline: 8px;
+  border: 1px solid $secondary-60;
+  border-radius: 4px;
+  color: $primary-100;
+
+  &__button {
+    box-sizing: border-box;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  &__value {
+    @extend %h4;
+  }
+}

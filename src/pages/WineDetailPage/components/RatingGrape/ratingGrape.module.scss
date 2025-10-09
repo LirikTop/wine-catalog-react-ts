@@ -1,0 +1,57 @@
+@use '../../../../styles/index' as *;
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+
+  @include on-tablet {
+    column-gap: 32px;
+  }
+
+  &__name {
+    // flex: 1; /* займає доступний простір */
+    // min-width: 0; /* важливо, щоб обрізання працювало у flex-контейнері */
+    // white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+
+    white-space: nowrap; /* все в один рядок */
+    overflow: hidden; /* ховаємо те, що не влазить */
+    text-overflow: ellipsis;
+  }
+
+  &__icon-content {
+    display: flex;
+    column-gap: 8px;
+
+    @include on-desktop {
+      column-gap: 16px;
+    }
+  }
+
+  &__icon {
+    stroke: $primary-100;
+    fill: transparent;
+    width: 32px;
+    height: 32px;
+    transition:
+      fill 0.2s ease,
+      stroke 0.2s ease;
+
+    @include on-tablet {
+      width: 35px;
+      height: 35px;
+    }
+
+    &--full {
+      stroke: $primary-100;
+      fill: $primary-100;
+    }
+
+    &--half {
+      stroke: $primary-100;
+      fill: linear-gradient(to right, $primary-100 50%, transparent 50%);
+    }
+  }
+}

@@ -56,15 +56,16 @@ export const StarRating: React.FC<Props> = ({
   value = 0,
   onRating = () => {},
   type = '',
+  edit = !Boolean(type),
 }) => {
   const ratingChanged = (newRating: number) => {
     onRating(newRating);
   };
 
-  const isEdit = !Boolean(type);
+  // const isEdit = !Boolean(type);
 
   const starRating = {
-    size: Boolean(type) ? 24 : 32,
+    size: Boolean(type) ? 24 : 52,
     color: Boolean(type) ? 'gray' : '#F6DDD6',
     activeColor: type === 'review' ? '#212529' : '#6E0D1A',
   };
@@ -83,7 +84,7 @@ export const StarRating: React.FC<Props> = ({
       fullIcon={<i className="fa fa-star"></i>}
       color={color}
       activeColor={activeColor}
-      edit={isEdit}
+      edit={edit}
     />
   );
 };

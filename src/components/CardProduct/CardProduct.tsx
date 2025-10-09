@@ -31,7 +31,7 @@ export const CardProduct: React.FC<Props> = React.memo(({ product }) => {
             <div className={style['card-product__rating-content']}>
               <IconButton iconName={IconEnum.star} />
               <p className={style['card-product__rating-value']}>
-                {product.rating}
+                {Number(product.rating).toFixed(1)}
               </p>
             </div>
             <div
@@ -67,7 +67,7 @@ export const CardProduct: React.FC<Props> = React.memo(({ product }) => {
                     style['card-product__text--dt'],
                   )}
                 >
-                  <span>{product.country}</span> &#8226;{''}
+                  <span>{product.country}</span> &#8226;{' '}
                   <span>{product.producer}</span>
                 </p>
               </div>

@@ -98,12 +98,12 @@
   }
 }
 
-@mixin margin-bottom {
-  margin-bottom: 120px;
+@mixin margin-top {
+  margin-top: 32px;
 
-  @include on-tablet {
-    margin-bottom: 148px;
-  }
+  // @include on-tablet {
+  //   margin-bottom: 148px;
+  // }
 }
 
 @mixin page-grid {

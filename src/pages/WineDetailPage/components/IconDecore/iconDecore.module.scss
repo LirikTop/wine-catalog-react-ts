@@ -1,0 +1,33 @@
+@use '../../../../styles/index' as *;
+
+.decore {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 4px;
+  width: 100%;
+
+  &__content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+  }
+
+  &__icon {
+    padding-inline: 12px;
+    width: 24px;
+    height: 24px;
+    color: $gray-90;
+
+    @include on-desktop {
+      padding-inline: 25px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__name {
+    @extend %main-text;
+  }
+}

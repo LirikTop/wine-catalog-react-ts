@@ -1,1 +1,12 @@
 @use '../../styles/index' as *;
+
+
+.wineDetailPage {
+  @include margin-top;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+  }
+}

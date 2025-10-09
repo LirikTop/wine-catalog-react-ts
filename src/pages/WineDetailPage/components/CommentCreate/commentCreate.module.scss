@@ -1,0 +1,84 @@
+@use '../../../../styles/index' as *;
+
+.comment-create {
+  @include page-grid;
+
+  row-gap: 24px;
+
+  @include on-tablet {
+    row-gap: 16px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/-1;
+
+    row-gap: 24px;
+
+    @include on-tablet {
+      row-gap: 40px;
+    }
+  }
+
+  &__top {
+    @include page-grid;
+
+    row-gap: 8px;
+
+    @include on-tablet {
+      row-gap: 16px;
+    }
+  }
+
+  &__text {
+    @extend %main-text;
+
+    grid-column: 1/-1;
+  }
+
+  &__rating {
+    grid-column: 1 / span 4;
+  }
+
+  &__bottom {
+    @include page-grid;
+
+    row-gap: 16px;
+  }
+
+  &__textarea {
+    box-sizing: border-box;
+    padding: 10px;
+    height: 85px;
+    grid-column: span 2;
+    border: 1px solid $gray-60;
+    border-radius: 8px;
+
+    @include on-tablet {
+      grid-column: span 3;
+      height: 128px;
+    }
+
+    @include on-desktop {
+      grid-column: span 6;
+    }
+  }
+
+  &__error {
+    grid-column: 1 / -1;
+    color: $primary-100;
+  }
+
+  &__button {
+    grid-column: 1/-1;
+
+    @include on-tablet {
+      grid-column: 3 / span 2;
+    }
+
+    @include on-desktop {
+      grid-column: 5 / span 4;
+    }
+  }
+}

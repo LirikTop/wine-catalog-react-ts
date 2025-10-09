@@ -47,11 +47,13 @@ export const CardComment: React.FC<Props> = React.memo(
             <div className={cn(style.comment__top)}>
               <div className={cn(style['comment__rating-content'])}>
                 {isComment && (
-                  <p className={cn(style['comment__rating-value'])}>{rating}</p>
+                  <p className={cn(style['comment__rating-value'])}>
+                    {Number(rating).toFixed(1)}
+                  </p>
                 )}
                 <StarRating type={type} value={Number(rating)} />
               </div>
-              {isComment && (
+              {!isComment && (
                 <h2 className={cn(style.comment__title)}>{wine?.name}</h2>
               )}
             </div>

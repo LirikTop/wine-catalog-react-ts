@@ -64,7 +64,8 @@
   }
 
   &__button {
-    width: 395px;
+    width: 100%;
+    max-width: 395px;
     align-self: center;
   }
 }

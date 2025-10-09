@@ -23,7 +23,11 @@ export const App = () => {
   return (
     <PageProvider>
       <div className="App">
-        <div className="container">{!isHomePage && <Topbar />}</div>
+        {!isHomePage && (
+          <div className="container">
+            <Topbar />
+          </div>
+        )}
         <div className="App__content">
           <main className="App__main">
             <Outlet />

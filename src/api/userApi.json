@@ -15,5 +15,23 @@
     "commentsId": [1],
     "favoritesId": [0],
     "cartsId": [0]
+  },
+
+  {
+    "id": 2,
+    "userName": "Nick",
+    "image": "https://i.ebayimg.com/images/g/c8gAAOSwl5xiu3EW/s-l1200.jpg",
+    "commentsId": [2],
+    "favoritesId": [0],
+    "cartsId": [0]
+  },
+
+  {
+    "id": 3,
+    "userName": "Jinx",
+    "image": "https://i.ebayimg.com/images/g/c8gAAOSwl5xiu3EW/s-l1200.jpg",
+    "commentsId": [2, 3],
+    "favoritesId": [0],
+    "cartsId": [0]
   }
 ]

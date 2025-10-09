@@ -1,0 +1,63 @@
+@use '../../../../styles/index' as *;
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  row-gap: 19px;
+
+  @include on-tablet {
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %h2;
+
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__list-content {
+    @include page-grid;
+
+    row-gap: 16px;
+
+    @include on-tablet {
+      row-gap: 21px;
+    }
+  }
+
+  &__list {
+    @include page-grid;
+
+    grid-column: 1/-1;
+    row-gap: 16px;
+
+    @include on-tablet {
+      row-gap: 21px;
+    }
+  }
+
+  &__list-comment {
+    grid-column: 1/-1;
+
+    @include on-tablet {
+      grid-column: span 3;
+    }
+
+    @include on-desktop {
+      grid-column: span 6;
+    }
+  }
+
+  &__button {
+    grid-column: 1/-1;
+
+    @include on-tablet {
+      grid-column: 3 / span 2;
+    }
+
+    @include on-desktop {
+      grid-column: 5 / span 4;
+    }
+  }
+}

@@ -72,6 +72,7 @@
   &--leaf {
     mask: url(/leaf.svg) no-repeat center;
     background-color: var(--gray-60);
+    object-fit: cover;
     cursor: default;
     pointer-events: none;
 

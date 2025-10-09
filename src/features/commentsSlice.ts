@@ -3,8 +3,8 @@ import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../app/store';
 import { Comment } from '../types/Comment';
 import {
-  createComment,
-  getWineComments,
+  // createComment,
+  // getWineComments,
   deleteComment as dc,
   // getComments,
 } from '../api/comments';
@@ -32,7 +32,9 @@ export const fetchAllComments = createAsyncThunk(
 export const fetchComments = createAsyncThunk(
   'comments/fetchComments',
   async (postId: Wine['id']) => {
-    const value = await getWineComments(postId);
+    // const value = await getWineComments(postId);
+    await new Promise(resolve => setTimeout(resolve, 300));
+    const value = [...Comments].filter(comment => comment.wineId === postId);
 
     return value;
   },
@@ -44,8 +46,10 @@ export const addComment = createAsyncThunk(
     const newCommnet = {
       ...comment,
       date: new Date().toISOString(),
+      id: Math.floor(Math.random() * 100) + 1,
     };
-    const value = await createComment(newCommnet);
+    // const value = await createComment(newCommnet);
+    const value = newCommnet;
 
     return value;
   },
