@@ -234,16 +234,29 @@
 // export const selectCart = (state: RootState) => state.cart;
 // export default cartSlice.reducer;
 
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import { Wine } from '../types/Wine';
+import {
+  createSlice,
+  createAsyncThunk,
+  PayloadAction,
+  createSelector,
+} from '@reduxjs/toolkit';
+import { CartItem, Wine } from '../types/Wine';
 import { RootState } from '../app/store';
 import { getOrder } from '../api/order';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import isEqual from 'lodash/isEqual';
+
+// const saveCartToStorage = (cartItems: CartItem[]) => {
+//   localStorage.setItem('cart', JSON.stringify(cartItems));
+// };
 
 const saveCartToStorage = (cartItems: CartItem[]) => {
-  localStorage.setItem('cart', JSON.stringify(cartItems));
+  requestIdleCallback(() => {
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+  });
 };
 
-type CartItem = Wine & { quantity: number };
+// type CartItem = Wine & { quantity: number };
 
 type CartState = {
   cartItems: CartItem[];
@@ -391,13 +404,19 @@ export const cartSlice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(addToCart.fulfilled, (state, action) => {
-        state.cartItems = action.payload;
+        if (!isEqual(state.cartItems, action.payload)) {
+          state.cartItems = action.payload;
+        }
       })
       .addCase(removeFromCart.fulfilled, (state, action) => {
-        state.cartItems = action.payload;
+        if (!isEqual(state.cartItems, action.payload)) {
+          state.cartItems = action.payload;
+        }
       })
       .addCase(updateQuantity.fulfilled, (state, action) => {
-        state.cartItems = action.payload;
+        if (!isEqual(state.cartItems, action.payload)) {
+          state.cartItems = action.payload;
+        }
       })
       .addCase(placeOrder.pending, state => {
         state.loading = true;
@@ -419,4 +438,8 @@ export const cartSlice = createSlice({
 
 export const { clearCart, setCart } = cartSlice.actions;
 export const selectCart = (state: RootState) => state.cart;
+export const selectCartItems = createSelector(
+  [(state: RootState) => state.cart.cartItems],
+  cartItems => [...cartItems], // або без копії, якщо стабільні
+);
 export default cartSlice.reducer;

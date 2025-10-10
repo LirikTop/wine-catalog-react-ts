@@ -17,6 +17,7 @@ export const Input: React.FC<Props> = React.memo(({ isButton = true }) => {
     <form className={style.form} onSubmit={handleSubmit}>
       <div className={style.form__inputGroup}>
         <input
+          id="email"
           type="email"
           className={style.form__input}
           placeholder="Enter email address"

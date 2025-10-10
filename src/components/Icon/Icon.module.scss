@@ -1,3 +1,149 @@
+// @use '../../styles/index' as *;
+
+// @mixin reset {
+//   padding: 0;
+//   aspect-ratio: 1/1;
+//   box-shadow: none;
+
+//   &:hover {
+//     &::after {
+//       content: '';
+//       display: none;
+//     }
+//   }
+// }
+
+// .icon__container {
+//   display: flex;
+//   position: relative;
+//   cursor: pointer;
+// }
+
+// .icon {
+//   --color: var(--main-text-color);
+
+//   box-sizing: border-box;
+//   width: 24px;
+//   height: 24px;
+//   display: inline-block;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   box-shadow: -1px 0 0 0 #e2e6e9;
+
+//   @include hover-all;
+//   @include link-bottom-line-action('hover', var(--color));
+
+//   &--home {
+//     --color: var(--white);
+
+//     @include hover-all;
+
+//     &:hover {
+//       --color: var(--gray-60);
+
+//       @include hover-all;
+//     }
+//   }
+
+//   // &--active {
+//   //   @include link-bottom-line-action('active', var(--color));
+//   // }
+
+//   &--active {
+//     background-color: var(--primary-100);
+//   }
+
+//   &--button {
+//     --color: var(--primary-100);
+
+//     @include reset;
+//   }
+
+//   &--leaf {
+//     mask: url(/leaf.svg) no-repeat center;
+//     background-color: var(--gray-60);
+//     object-fit: cover;
+//     cursor: default;
+//     pointer-events: none;
+
+//     @include reset;
+//   }
+
+//   &--delete {
+//     mask: url(/close.svg) no-repeat center;
+//     background-color: var(--color);
+
+//     @include reset;
+//   }
+
+//   &--burger {
+//     mask: url(/burger.svg) no-repeat center;
+//     background-color: var(--color);
+
+//     @include on-tablet {
+//       display: none;
+//       position: absolute;
+//     }
+//   }
+
+//   &--close {
+//     mask: url(/close.svg) no-repeat center;
+//     background-color: var(--color);
+
+//     @include on-tablet {
+//       display: none;
+//     }
+//   }
+
+//   &--favorites {
+//     position: relative;
+
+//     mask: url(/favorites.svg) no-repeat center;
+//     background-color: var(--color);
+//   }
+
+//   &--cart {
+//     position: relative;
+
+//     mask: url(/cart.svg) no-repeat center;
+//     background-color: var(--color);
+//   }
+
+//   &--person {
+//     display: block;
+
+//     mask: url(/person.svg) no-repeat center;
+//     background-color: var(--color);
+//   }
+
+//   &__counter {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: absolute;
+//     width: 16px;
+//     aspect-ratio: 1/1;
+
+//     font-family: $font-family-general;
+//     font-weight: 600;
+//     font-size: 9px;
+//     line-height: 100%;
+//     letter-spacing: 0%;
+
+//     border: 1px solid #fff;
+//     border-radius: 100%;
+//     background: $error;
+//     color: white;
+
+//     transform: translateY(-25%) translateX(50%);
+//   }
+// }
+
+// .icon--cart.icon--active,
+// .icon--favorites.icon--active {
+//   background-color: var(--primary-100);
+// }
+
 @use '../../styles/index' as *;
 
 @mixin reset {
@@ -17,6 +163,10 @@
   display: flex;
   position: relative;
   cursor: pointer;
+
+  &--active {
+    border-bottom: 3px solid $primary-100;
+  }
 }
 
 .icon {
@@ -31,14 +181,11 @@
   box-shadow: -1px 0 0 0 #e2e6e9;
 
   @include hover-all;
-  @include link-bottom-line-action('hover', var(--color));
 
-  &--home {
+  &--homePage {
     --color: var(--white);
 
     @include hover-all;
-
-    // @include link-padding;
 
     &:hover {
       --color: var(--gray-60);
@@ -48,7 +195,7 @@
   }
 
   &--active {
-    @include link-bottom-line-action('active', var(--color));
+    --color: var(--primary-100);
   }
 
   &--button {
@@ -56,18 +203,6 @@
 
     @include reset;
   }
-
-  // &--home {
-  //   background-image: url('/assets/Home.svg');
-
-  //   @include reset;
-  // }
-
-  // &--arrow {
-  //   @include reset;
-
-  //   background-image: url(/assets/arrow.svg);
-  // }
 
   &--leaf {
     mask: url(/leaf.svg) no-repeat center;
@@ -87,8 +222,6 @@
   }
 
   &--burger {
-    // background-image: url('/burger.svg');
-
     mask: url(/burger.svg) no-repeat center;
     background-color: var(--color);
 
@@ -99,8 +232,6 @@
   }
 
   &--close {
-    // background-image: url('/close.svg');
-
     mask: url(/close.svg) no-repeat center;
     background-color: var(--color);
 
@@ -112,52 +243,23 @@
   &--favorites {
     position: relative;
 
-    // display: none;
-    // background-image: url('/favorites.svg');
-
     mask: url(/favorites.svg) no-repeat center;
     background-color: var(--color);
-
-    // @include on-tablet {
-    //   display: block;
-    // }
   }
 
   &--cart {
     position: relative;
 
-    // display: none;
-    // background-image: url('/cart.svg');
-
     mask: url(/cart.svg) no-repeat center;
     background-color: var(--color);
-
-    // @include on-tablet {
-    //   display: block;
-    // }
   }
 
   &--person {
     display: block;
 
-    // display: none;
-    // background-image: url('/person.svg');
-
     mask: url(/person.svg) no-repeat center;
     background-color: var(--color);
-
-    // @include on-tablet {
-    //   display: block;
-    // }
   }
-
-  // &--menu {
-  //   box-sizing: border-box;
-  //   display: inline-block;
-  //   width: 50%;
-  //   padding: 24px 0;
-  //   transform: translateY(-2px);
-  // }
 
   &__counter {
     display: flex;
@@ -179,11 +281,10 @@
     color: white;
 
     transform: translateY(-25%) translateX(50%);
-
-    // &--menu {
-    //   top: 50%;
-    //   left: 50%;
-    //   transform: translateY(-100%);
-    // }
   }
 }
+
+// .icon--cart.icon--active,
+// .icon--favorites.icon--active {
+//   background-color: var(--primary-100);
+// }

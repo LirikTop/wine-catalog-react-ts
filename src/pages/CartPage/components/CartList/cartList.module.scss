@@ -1,0 +1,30 @@
+@use '../../../../styles/index' as *;
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  &__header {
+    display: none;
+
+    @include on-desktop {
+      display: grid;
+      grid-template-columns: 1fr 170px 150px;
+      align-items: center;
+      color: $gray-90;
+      padding-bottom: 6px;
+      border-bottom: 1px solid $secondary-60;
+      margin-bottom: 16px;
+    }
+  }
+  &__title {
+    @extend %h3;
+
+    text-transform: lowercase;
+    
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}

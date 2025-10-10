@@ -1,1 +1,133 @@
 @use '../../styles/index' as *;
+
+.cartPage {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    @include margin-top;
+
+    @include on-tablet {
+      row-gap: 56px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @include on-tablet {
+      @include page-grid;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    @include on-tablet {
+      row-gap: 44px;
+    }
+  }
+
+  &__cart-list {
+    display: flex;
+    flex-direction: column;
+
+    @include on-tablet {
+      grid-column: span 4;
+      row-gap: 56px;
+    }
+
+    @include on-desktop {
+      grid-column: span 8;
+    }
+  }
+
+  &__boundary {
+    display: none;
+
+    @include on-desktop {
+      height: 100%;
+      display: flex;
+      grid-column: 9 / span 1;
+      justify-content: flex-end;
+    }
+  }
+
+  &__summary {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+
+    @include on-tablet {
+      grid-column: 5/-1;
+    }
+
+    @include on-desktop {
+      grid-column: 10/-1;
+    }
+  }
+
+  &__title {
+    @extend %h2;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+
+  &__summary-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    @include on-tablet {
+      row-gap: 24px;
+    }
+  }
+
+  &__summary-row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 8px;
+  }
+
+  &__summary-title {
+    @extend %h3;
+  }
+
+  &__summary-value {
+    @extend %h4;
+  }
+
+  &__input-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+  }
+
+  &__text {
+    @extend %h3;
+  }
+
+  &__button-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  &__button-text {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 8px;
+  }
+
+  &__price {
+    @extend %big-text;
+  }
+}

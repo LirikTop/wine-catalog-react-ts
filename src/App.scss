@@ -14,10 +14,13 @@
     display: flex;
     flex-direction: column;
     row-gap: 48px;
+
+    @include on-desktop {
+      row-gap: 110px;
+    }
   }
 
   &__main {
     min-height: 50vh;
-
   }
 }
