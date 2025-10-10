@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { DetailCard } from './components/DetailCard';
 import style from './wineDetailPage.module.scss';
 import { useEffect, useState } from 'react';
@@ -9,12 +9,12 @@ import { Reviews } from './components/Reviews';
 import { CommentCreate } from './components/CommentCreate';
 import { Loader } from '../../components/Loader';
 import { BackButton } from '../../components/BackButton';
+import { NotFoundPage } from '../NotFoundPage';
 
 export const WineDetailPage = () => {
   const { wineId } = useParams();
   const [detailProduct, setDetailProduct] = useState<ProductDetail>();
   const [loading, setLoading] = useState(true);
-  const navigation = useNavigate();
 
   useEffect(() => {
     setLoading(true);
@@ -41,7 +41,7 @@ export const WineDetailPage = () => {
   }, [wineId]);
 
   if (!detailProduct && !loading) {
-    return navigation('*');
+    return <NotFoundPage />;
   }
 
   return (
