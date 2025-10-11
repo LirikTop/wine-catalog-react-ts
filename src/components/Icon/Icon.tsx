@@ -93,10 +93,17 @@ type IconProps = {
 // );
 
 export const Icon: React.FC<IconProps> = React.memo(
-  ({ iconName, href = '', variant = NavVariants.default, count = false }) => {
+  ({
+    iconName,
+    href = '',
+    variant = NavVariants.default,
+    count = false,
+    onActive = () => {},
+  }) => {
     const location = useLocation();
     const navigate = useNavigate();
     const isHome = location.pathname === PagesLinkEnum.home;
+    const getActive = () => onActive((current: boolean) => !current);
     const iaContainerActive =
       (location.pathname.includes(IconEnum.cart) &&
         iconName === IconEnum.cart) ||
@@ -126,14 +133,18 @@ export const Icon: React.FC<IconProps> = React.memo(
         })}
       >
         <NavLink
-          to={href}
+          to={getPath(iconName)}
+          onClick={getActive}
           className={({ isActive }) =>
             cn(
               iconStyle.icon,
               iconStyle[`icon--${iconName}`],
               iconStyle[`icon--${variant}`],
               {
-                [iconStyle['icon--active']]: isActive,
+                [iconStyle['icon--active']]:
+                  isActive &&
+                  iconName !== IconEnum.burger &&
+                  iconName !== IconEnum.close,
                 [iconStyle[`icon--homePage`]]: isHome,
               },
             )
