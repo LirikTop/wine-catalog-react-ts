@@ -1,4 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
+import { getImageUrl } from '../../../../utils/getImageUrl';
 import style from './iconDecore.module.scss';
 import { CiApple } from 'react-icons/ci';
 
@@ -11,7 +12,7 @@ export const IconDecore = () => {
       </div>
       <div className={style.decore__content}>
         <img
-          src={`${import.meta.env.BASE_URL}pear.svg`}
+          src={getImageUrl('pear.svg')}
           alt="pear image"
           className={style.decore__icon}
         />
@@ -19,7 +20,7 @@ export const IconDecore = () => {
       </div>
       <div className={style.decore__content}>
         <img
-          src={`${import.meta.env.BASE_URL}lemon.svg`}
+          src={getImageUrl('lemon.svg')}
           alt="lemon image"
           className={style.decore__icon}
         />
@@ -27,7 +28,7 @@ export const IconDecore = () => {
       </div>
       <div className={style.decore__content}>
         <img
-          src={`${import.meta.env.BASE_URL}minerality.svg`}
+          src={getImageUrl('minerality.svg')}
           alt="minerality image"
           className={style.decore__icon}
         />
@@ -35,7 +36,7 @@ export const IconDecore = () => {
       </div>
       <div className={style.decore__content}>
         <img
-          src={`${import.meta.env.BASE_URL}herbs.svg`}
+          src={getImageUrl('herbs.svg')}
           alt="herbs image"
           className={style.decore__icon}
         />

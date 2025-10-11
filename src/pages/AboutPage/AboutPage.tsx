@@ -2,6 +2,7 @@ import style from './aboutPeage.module.scss';
 import cn from 'classnames';
 import aboutBlocks from './aboutBlocks.json';
 import { ContactUs } from './components/ContactUs';
+import { getImageUrl } from '../../utils/getImageUrl';
 
 export const AboutPage = () => {
   return (
@@ -50,11 +51,11 @@ export const AboutPage = () => {
                     })}
                   >
                     <source
-                      srcSet={`${import.meta.env.BASE_URL}${block.images.tabletImage}`}
+                      srcSet={getImageUrl(block.images.tabletImage)}
                       media="(min-width: 640px)"
                     />
                     <img
-                      src={`${import.meta.env.BASE_URL}${block.images.image}`}
+                      src={getImageUrl(block.images.image)}
                       alt={`${component.title} image`}
                       className={style['about-page__image']}
                       loading="lazy"

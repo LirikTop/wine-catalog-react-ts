@@ -63,7 +63,7 @@ export const CardComment: React.FC<Props> = React.memo(
                 <div className={cn(style['comment__user-image-wrapper'])}>
                   <img
                     src={user?.image}
-                    alt=""
+                    alt="wine image"
                     className={cn(style['comment__user-image'])}
                   />
                 </div>

@@ -3,6 +3,7 @@ import { Button } from '../../../../components/Button';
 import style from './about.module.scss';
 import cn from 'classnames';
 import { PagesLinkEnum } from '../../../../types/PagesType';
+import { getImageUrl } from '../../../../utils/getImageUrl';
 
 export const About = () => {
   return (
@@ -20,21 +21,21 @@ export const About = () => {
 
           <div className={cn(style.about__gallery)}>
             <img
-              src={`${import.meta.env.BASE_URL}images/home/about_us-1.png`}
+              src={getImageUrl('images/home/about_us-1.png')}
               alt=""
               className={cn(style['about__img-1'], style.about__img)}
               loading="lazy"
             />
 
             <img
-              src={`${import.meta.env.BASE_URL}images/home/about_us-2.png`}
+              src={getImageUrl('images/home/about_us-2.png')}
               alt=""
               className={cn(style['about__img-2'], style.about__img)}
               loading="lazy"
             />
 
             <img
-              src={`${import.meta.env.BASE_URL}images/home/about_us-3.png`}
+              src={getImageUrl('images/home/about_us-3.png')}
               alt=""
               className={cn(style['about__img-3'], style.about__img)}
               loading="lazy"
