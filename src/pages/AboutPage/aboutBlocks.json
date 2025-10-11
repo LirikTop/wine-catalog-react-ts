@@ -8,8 +8,8 @@
           "Wine is more than just a drink. It is history, culture, and emotions that are born in every bottle. It was with this idea in mind that WINSET was created — a place where everyone can discover the world of wine in a convenient and inspiring way."
         ],
         "images": {
-          "image": "/images/about_us/company-1.png",
-          "tabletImage": "/images/about_us/company-1-tb.png"
+          "image": "images/about_us/company-1.png",
+          "tabletImage": "images/about_us/company-1-tb.png"
         }
       },
       {
@@ -17,8 +17,8 @@
           "WINSET is your virtual sommelier, always at your side. It will help you navigate hundreds of names and choose a wine for a gathering with friends, a romantic dinner, or a family feast. Here you will find both affordable and simple options, as well as rare wines with a rich history. Each recommendation is designed to allow you to enjoy the moment without unnecessary worries. After all, choosing wine should be a pleasure, not a chore."
         ],
         "images": {
-          "image": "/images/about_us/company-2.png",
-          "tabletImage": "/images/about_us/company-2-tb.png"
+          "image": "images/about_us/company-2.png",
+          "tabletImage": "images/about_us/company-2-tb.png"
         }
       },
       {
@@ -27,8 +27,8 @@
           "Our mission is to inspire, educate, and guide — without pathos, but with genuine love for wine. Because for us, it’s not only about what you drink, but also about the experience you share with others."
         ],
         "images": {
-          "image": "/images/about_us/company-3.png",
-          "tabletImage": "/images/about_us/company-3-tb.png"
+          "image": "images/about_us/company-3.png",
+          "tabletImage": "images/about_us/company-3-tb.png"
         }
       }
     ]
@@ -44,8 +44,8 @@
           "We don't just give you a list of wines — we suggest which one is right for you. Thanks to easy guidelines, convenient filters, and honest descriptions, you can quickly find what suits your mood, taste, and budget. It's like having a personal sommelier who always knows the right answer."
         ],
         "images": {
-          "image": "/images/about_us/why_us-1.png",
-          "tabletImage": "/images/about_us/why_us-1-tb.png"
+          "image": "images/about_us/why_us-1.png",
+          "tabletImage": "images/about_us/why_us-1-tb.png"
         }
       },
       {
@@ -57,8 +57,8 @@
           "• Comfort — we create a space where choosing wine brings pleasure and joy without unnecessary hassle."
         ],
         "images": {
-          "image": "/images/about_us/why_us-2.png",
-          "tabletImage": "/images/about_us/why_us-2-tb.png"
+          "image": "images/about_us/why_us-2.png",
+          "tabletImage": "images/about_us/why_us-2-tb.png"
         }
       },
       {
@@ -66,8 +66,8 @@
           "We believe that wine should be accessible to everyone — regardless of experience or budget. That's why WINSET exists to make this world open, friendly, and inspiring for you."
         ],
         "images": {
-          "image": "/images/about_us/why_us-3.png",
-          "tabletImage": "/images/about_us/why_us-3-tb.png"
+          "image": "images/about_us/why_us-3.png",
+          "tabletImage": "images/about_us/why_us-3-tb.png"
         }
       }
     ]

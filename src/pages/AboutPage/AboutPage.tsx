@@ -50,11 +50,11 @@ export const AboutPage = () => {
                     })}
                   >
                     <source
-                      srcSet={block.images.tabletImage}
+                      srcSet={`${import.meta.env.BASE_URL}${block.images.tabletImage}`}
                       media="(min-width: 640px)"
                     />
                     <img
-                      src={block.images.image}
+                      src={`${import.meta.env.BASE_URL}${block.images.image}`}
                       alt={`${component.title} image`}
                       className={style['about-page__image']}
                       loading="lazy"

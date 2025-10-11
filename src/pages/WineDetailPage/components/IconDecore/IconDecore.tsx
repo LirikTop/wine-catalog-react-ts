@@ -10,23 +10,35 @@ export const IconDecore = () => {
         <p className={style.decore__name}>Apple</p>
       </div>
       <div className={style.decore__content}>
-        <img src="/pear.svg" alt="pear image" className={style.decore__icon} />
+        <img
+          src={`${import.meta.env.BASE_URL}pear.svg`}
+          alt="pear image"
+          className={style.decore__icon}
+        />
         <p className={style.decore__name}>Pear</p>
       </div>
       <div className={style.decore__content}>
-        <img src="/lemon.svg" alt="pear image" className={style.decore__icon} />
+        <img
+          src={`${import.meta.env.BASE_URL}lemon.svg`}
+          alt="lemon image"
+          className={style.decore__icon}
+        />
         <p className={style.decore__name}>Lemon</p>
       </div>
       <div className={style.decore__content}>
         <img
-          src="/minerality.svg"
-          alt="pear image"
+          src={`${import.meta.env.BASE_URL}minerality.svg`}
+          alt="minerality image"
           className={style.decore__icon}
         />
         <p className={style.decore__name}>Minerality</p>
       </div>
       <div className={style.decore__content}>
-        <img src="/herbs.svg" alt="pear image" className={style.decore__icon} />
+        <img
+          src={`${import.meta.env.BASE_URL}herbs.svg`}
+          alt="herbs image"
+          className={style.decore__icon}
+        />
         <p className={style.decore__name}>Herbs</p>
       </div>
     </div>
