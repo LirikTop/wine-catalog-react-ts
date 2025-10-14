@@ -1,6 +1,7 @@
 @use '../../styles/index' as *;
 
 .button {
+  @include border-radius;
   @extend %big-text;
 
   box-sizing: border-box;
@@ -14,7 +15,6 @@
   color: var(--color);
   background-color: var(--bg-color);
   border: 2px solid var(--border-color);
-  border-radius: 8px;
   cursor: pointer;
 
   @include hover-all;

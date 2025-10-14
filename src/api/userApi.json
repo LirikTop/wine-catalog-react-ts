@@ -1,8 +1,8 @@
 [
   {
     "id": 0,
-    "userName": "Nick",
-    "image": "https://i.ebayimg.com/images/g/c8gAAOSwl5xiu3EW/s-l1200.jpg",
+    "userName": "Ekko",
+    "image": "https://i.pinimg.com/736x/23/d6/8a/23d68a84e5af34553b8a491acb094654.jpg",
     "commentsId": [0],
     "favoritesId": [0],
     "cartsId": [0]
@@ -19,8 +19,8 @@
 
   {
     "id": 2,
-    "userName": "Nick",
-    "image": "https://i.ebayimg.com/images/g/c8gAAOSwl5xiu3EW/s-l1200.jpg",
+    "userName": "Ekko",
+    "image": "https://i.pinimg.com/736x/23/d6/8a/23d68a84e5af34553b8a491acb094654.jpg",
     "commentsId": [2],
     "favoritesId": [0],
     "cartsId": [0]

@@ -8,6 +8,8 @@
   }
 
   &__sort-list {
+    @include border-radius;
+    
     position: absolute;
     background-color: $white;
     z-index: 10;
@@ -15,7 +17,6 @@
     padding: 16px;
     box-shadow: 2px 3px 7px 0 #6e0d1a80;
     border: 1px solid #bbb;
-    border-radius: 8px;
 
     opacity: 0;
     transition: all 0.3s;

@@ -11,10 +11,11 @@
   }
 
   &__image-wrapper {
+    @include border-radius;
+    
     box-sizing: border-box;
     background-color: $secondary-100;
     border: 1px solid $gray-30;
-    border-radius: 8px;
     padding-block: 10px;
     grid-column: span 1;
     max-width: 200px;

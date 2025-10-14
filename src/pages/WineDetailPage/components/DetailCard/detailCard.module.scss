@@ -32,6 +32,8 @@
   }
 
   &__imageContent {
+    @include border-radius;
+
     box-sizing: border-box;
     display: flex;
     justify-content: center;

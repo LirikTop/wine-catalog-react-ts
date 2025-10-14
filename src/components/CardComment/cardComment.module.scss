@@ -1,9 +1,10 @@
 @use '../../styles/index' as *;
 
 .comment {
+  @include border-radius;
+  
   background: $secondary-100;
   border: 1px solid $gray-30;
-  border-radius: 8px;
   cursor: pointer;
 
   &__container {
@@ -26,7 +27,7 @@
     height: 100%;
     object-fit: cover;
 
-    @include hover(transform, scale(1.1));
+    @include scale;
   }
 
   &__content {

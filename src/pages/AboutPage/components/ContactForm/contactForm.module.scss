@@ -10,6 +10,8 @@
   }
 
   &__content {
+    @include border-radius;
+
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -17,7 +19,6 @@
     padding: 16px;
     background: $secondary-100;
     border: 1px solid $gray-30;
-    border-radius: 8px;
 
     @include on-desktop {
       row-gap: 24px;
@@ -43,10 +44,11 @@
   }
 
   &__input {
+    @include border-radius;
+    
     box-sizing: border-box;
     padding: 16px 0 16px 10px;
     border: 1px solid $gray-60;
-    border-radius: 8px;
     background-color: rgba(255, 255, 255, 0);
     width: 100%;
 

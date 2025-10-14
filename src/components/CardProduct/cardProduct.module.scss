@@ -16,6 +16,8 @@
 }
 
 .card-product {
+  @include border-radius;
+  
   box-sizing: border-box;
   background-color: $secondary-100;
   border: 1px solid $gray-30;
@@ -24,7 +26,7 @@
   min-height: 250px;
   max-height: 494px;
   cursor: pointer;
-  
+
   &__container {
     box-sizing: border-box;
     display: flex;
@@ -60,7 +62,7 @@
     object-fit: contain;
     aspect-ratio: 1/1;
 
-    @include hover(transform, scale(1.1));
+    @include scale;
   }
 
   &__bottom {
