@@ -11,14 +11,21 @@ import { PageProvider } from './context/PageContext';
 
 export const App = () => {
   const dispatch = useAppDispatch();
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     dispatch(fetchUsers());
     dispatch(fetchWines());
   }, []);
 
-  const isHomePage = location.pathname === '/' || location.pathname === '/home';
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, [pathname]);
+
+  const isHomePage = pathname === '/' || pathname === '/home';
 
   return (
     <PageProvider>
